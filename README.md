@@ -60,3 +60,12 @@ Arsitektur ini didesain agar App Layer dan Database Layer tidak dapat "saling me
     █                                   [ PERSISTENT ]     █
     █                                   +------------+     █
     ========================================================
+
+✅ TARGET CAPAIAN - [ CHECKLIST ]
+[x] [ 010 ] PROJECT_STRUCTURE_GIT: Membuat struktur folder project dan inisialisasi repositori Git.
+
+[x] [ 110 ] APP_LAYER_WP: Menyusun container menggunakan image resmi WordPress.
+
+[x] [ 111 ] DB_LAYER_SQL: Menyusun container database (MySQL/MariaDB) dengan Docker Volumes untuk memastikan persistensi data.
+
+[x] [ 011 ] NETWORK_ISOLATION: Membuat custom docker network (frontend-net dan backend-net) untuk memastikan isolasi penuh antar-container.
