@@ -31,8 +31,9 @@ menerapkan network isolation protocols untuk keamanan data antar-container.
 
 
 🏗️ ARSITEKTUR SISTEM (WEEK 1) - [ VISUALISASI_CYBER_STACK.TXT ]
-Arsitektur ini didesain agar App Layer dan Database Layer tidak dapat "saling melihat" secara langsung
-dari jaringan publik, memastikan data integrity dan attack vector reduction.
+Arsitektur ini didesain agar App Layer dan Database Layer tidak dapat "saling melihat"
+secara langsung dari jaringan publik, memastikan data integrity dan attack vector reduction.
+
 
 
 
@@ -67,7 +68,8 @@ dari jaringan publik, memastikan data integrity dan attack vector reduction.
     ========================================================
 
 ✅ TARGET CAPAIAN - [ CHECKLIST ]
-[x] [ 010 ] PROJECT_STRUCTURE_GIT: Membuat struktur folder project dan inisialisasi repositori Git.
+[x] [ 010 ] PROJECT_STRUCTURE_GIT: Membuat struktur folder project dan inisialisasi
+                                   repositori Git.
 
 [x] [ 110 ] APP_LAYER_WP: Menyusun container menggunakan image resmi WordPress.
 
