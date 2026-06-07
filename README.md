@@ -27,7 +27,7 @@
 Repositori ini memuat progress tugas kelompok Cloud Computing untuk Minggu
 1. Fokus utama pada fase ini adalah meninggalkan metode legacy all-in-one server dan mulai
 mengadopsi arsitektur cloud modern dengan pemisahan layer menggunakan Docker, serta
- menerapkan network isolation protocols untuk keamanan data antar-container.
+menerapkan network isolation protocols untuk keamanan data antar-container.
 
 
 🏗️ ARSITEKTUR SISTEM (WEEK 1) - [ VISUALISASI_CYBER_STACK.TXT ]
