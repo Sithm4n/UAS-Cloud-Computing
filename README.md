@@ -29,6 +29,8 @@ Repositori ini memuat progress tugas kelompok Cloud Computing untuk Minggu 1. Fo
 🏗️ ARSITEKTUR SISTEM (WEEK 1) - [ VISUALISASI_CYBER_STACK.TXT ]
 Arsitektur ini didesain agar App Layer dan Database Layer tidak dapat "saling melihat" secara langsung dari jaringan publik, memastikan data integrity dan attack vector reduction.
 
+
+
 ========================================================
                       [ PUBLIC_ACCESS ]
                            │
