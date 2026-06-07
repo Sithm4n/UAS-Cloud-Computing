@@ -69,4 +69,4 @@ Arsitektur ini didesain agar App Layer dan Database Layer tidak dapat "saling me
 [x] [ 111 ] DB_LAYER_SQL: Menyusun container database (MySQL/MariaDB) dengan Docker Volumes untuk memastikan persistensi data.
 
 [x] [ 011 ] NETWORK_ISOLATION: Membuat custom docker network (frontend-net dan backend-net) untuk memastikan isolasi penuh antar-container.
-p
+ppp
