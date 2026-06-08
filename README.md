@@ -78,5 +78,4 @@ secara langsung dari jaringan publik, memastikan data integrity dan attack vecto
 
 [x] [ 011 ] NETWORK_ISOLATION: Membuat custom docker network (frontend-net dan backend-net)
                                untuk memastikan isolasi penuh antar-container.
-pppppppppppppp
-
+abcdefghijklmnopqrstuvwxyz
