@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  # --- APP LAYER ---
+  wordpress:
+    image: wordpress:latest # Menggunakan official image WordPress
+    container_name: wp_app
+    restart: unless-stopped
+    ports:
+      - "8080:80" # Akses UI melalui http://localhost:8080
+    environment:
+      WORDPRESS_DB_HOST: db_server # Merujuk ke nama service database
+      WORDPRESS_DB_USER: wp_user
+      WORDPRESS_DB_PASSWORD: wp_password
+      WORDPRESS_DB_NAME: wp_database
+    networks:
+      - frontend-net
+      - backend-net # Membutuhkan akses ke backend untuk terhubung ke DB
+    volumes:
+      - wp_data:/var/www/html # Persistensi data untuk tema, plugin, dan upload
+    depends_on:
+      - db_server
+
+  # --- DATABASE LAYER (Kerangka untuk referensi) ---
+  db_server:
+    image: mariadb:10.11
+    container_name: wp_db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: wp_database
+      MYSQL_USER: wp_user
+      MYSQL_PASSWORD: wp_password
+    networks:
+      - backend-net # Terisolasi HANYA di backend-net, tidak ada port yang diekspos ke publik
+    volumes:
+      - db_data:/var/lib/mysql
+
+# --- INISIALISASI NETWORK & VOLUME ---
+networks:
+  frontend-net:
+    driver: bridge
+  backend-net:
+    driver: bridge
+
+volumes:
+  wp_data:
+  db_data:
