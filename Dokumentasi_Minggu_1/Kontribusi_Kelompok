@@ -20,7 +20,7 @@ Berikut adalah rincian tugas dan kontribusi masing-masing anggota kelompok dalam
    - Memastikan container WordPress terekspos pada port lokal yang benar untuk diakses via browser.
    - Mengonfigurasi environment variables agar WordPress dapat mendeteksi kredensial database.
 
-3. [Nama Anggota 3] - [NPM/NIM 3]
+3. [Aji Bayu Alam] - [240403010057]
    Peran: Database & Storage Engineer
    Kontribusi: 
    - Menyusun konfigurasi Database Layer menggunakan container MySQL/MariaDB.
