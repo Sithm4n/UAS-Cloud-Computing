@@ -5,7 +5,7 @@ Tema: Optimasi Performa & Object Storage
 
 Berikut adalah pembagian tugas yang adil untuk 5 anggota kelompok pada Minggu 2:
 
-1. [Nama Anggota 1] - [NPM/NIM 1]
+1. [Ariel Agus Putra Wahyuda] - [240403010036]
    - Menambahkan dan menyetel kontainer Redis (Cache) di file docker-compose.yml.
    - Memastikan jaringan Redis aman dan terisolasi di dalam backend-net.
 
