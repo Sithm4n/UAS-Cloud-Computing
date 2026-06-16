@@ -1,1 +1,45 @@
+====================================================================
+LOG KONTRIBUSI KELOMPOK - CLOUD COMPUTING
+MILESTONE MINGGU 1: Fondasi Arsitektur & Isolasi Jaringan
+Program Studi Teknik Informatika - Universitas PGRI Kanjuruhan Malang
+====================================================================
 
+Berikut adalah rincian tugas dan kontribusi masing-masing anggota kelompok dalam menyelesaikan target capaian pada minggu pertama:
+
+1. [Naja Najwa Robbi] - [240403010037]
+   Peran: Git & Repository Manager
+   Kontribusi: 
+   - Melakukan inisialisasi awal repositori Git kelompok.
+   - Membuat struktur folder project dasar untuk deployment.
+   - Mengatur perizinan kolaborator di GitHub agar seluruh anggota dapat melakukan commit.
+
+2. [Nama Anggota 2] - [NPM/NIM 2]
+   Peran: App Layer Engineer
+   Kontribusi: 
+   - Menyusun konfigurasi App Layer menggunakan container image resmi WordPress di dalam file docker-compose.yml.
+   - Memastikan container WordPress terekspos pada port lokal yang benar untuk diakses via browser.
+   - Mengonfigurasi environment variables agar WordPress dapat mendeteksi kredensial database.
+
+3. [Nama Anggota 3] - [NPM/NIM 3]
+   Peran: Database & Storage Engineer
+   Kontribusi: 
+   - Menyusun konfigurasi Database Layer menggunakan container MySQL/MariaDB.
+   - Mengimplementasikan Docker Volumes (misal: db_data) agar data pada database bersifat persistent (tidak hilang saat container mati).
+   - Menyiapkan root password dan user database khusus untuk WordPress.
+
+4. [Nama Anggota 4] - [NPM/NIM 4]
+   Peran: Network Architecture Specialist
+   Kontribusi: 
+   - Mengimplementasikan Network Isolation dengan membuat custom docker network (frontend-net dan backend-net).
+   - Memastikan container WordPress terhubung ke jaringan frontend dan backend.
+   - Mengisolasi container Database agar hanya berada di jaringan backend-net dan tidak bisa diakses dari jaringan publik.
+
+5. [Nama Anggota 5] - [NPM/NIM 5] (Anda)
+   Peran: QA Testing & Documentation
+   Kontribusi: 
+   - Melakukan pengujian pull repository, menjalankan docker-compose up, dan memastikan instalasi awal WordPress berjalan normal menggunakan database lokal.
+   - Mengambil screenshot hasil instalasi yang berhasil sebagai output monitoring.
+   - Menyusun laporan kontribusi kelompok ini (file notepad) dan memastikan seluruh commit pada branch utama tercatat dengan rapi.
+
+====================================================================
+Status Tugas Minggu 1: SELESAI
