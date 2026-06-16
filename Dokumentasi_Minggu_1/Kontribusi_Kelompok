@@ -34,7 +34,7 @@ Berikut adalah rincian tugas dan kontribusi masing-masing anggota kelompok dalam
    - Memastikan container WordPress terhubung ke jaringan frontend dan backend.
    - Mengisolasi container Database agar hanya berada di jaringan backend-net dan tidak bisa diakses dari jaringan publik.
 
-5. [Nama Anggota 5] - [NPM/NIM 5] (Anda)
+5. [Rafi Rinaldika Naufal] - [240403010077] 
    Peran: QA Testing & Documentation
    Kontribusi: 
    - Melakukan pengujian pull repository, menjalankan docker-compose up, dan memastikan instalasi awal WordPress berjalan normal menggunakan database lokal.
