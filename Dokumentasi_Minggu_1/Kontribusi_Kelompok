@@ -27,7 +27,7 @@ Berikut adalah rincian tugas dan kontribusi masing-masing anggota kelompok dalam
    - Mengimplementasikan Docker Volumes (misal: db_data) agar data pada database bersifat persistent (tidak hilang saat container mati).
    - Menyiapkan root password dan user database khusus untuk WordPress.
 
-4. [Nama Anggota 4] - [NPM/NIM 4]
+4. [Andika Dwi Febrian] - [240403010022]
    Peran: Network Architecture Specialist
    Kontribusi: 
    - Mengimplementasikan Network Isolation dengan membuat custom docker network (frontend-net dan backend-net).
