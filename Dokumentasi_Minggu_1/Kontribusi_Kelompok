@@ -35,11 +35,7 @@ Berikut adalah rincian tugas dan kontribusi masing-masing anggota kelompok dalam
    - Mengisolasi container Database agar hanya berada di jaringan backend-net dan tidak bisa diakses dari jaringan publik.
 
 5. [Rafi Rinaldika Naufal] - [240403010077] 
-   Peran: QA Testing & Documentation
-   Kontribusi: 
-   - Melakukan pengujian pull repository, menjalankan docker-compose up, dan memastikan instalasi awal WordPress berjalan normal menggunakan database lokal.
-   - Mengambil screenshot hasil instalasi yang berhasil sebagai output monitoring.
-   - Menyusun laporan kontribusi kelompok ini (file notepad) dan memastikan seluruh commit pada branch utama tercatat dengan rapi.
+  
 
 ====================================================================
 Status Tugas Minggu 1: SELESAI
