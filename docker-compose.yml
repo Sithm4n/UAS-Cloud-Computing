@@ -1,27 +1,32 @@
 version: '3.8'
 
 services:
-  # --- APP LAYER ---
+  # --- APP LAYER (Minggu 1) ---
   wordpress:
-    image: wordpress:latest # Menggunakan official image WordPress
+    image: wordpress:latest
     container_name: wp_app
     restart: unless-stopped
     ports:
-      - "8080:80" # Akses UI melalui http://localhost:8080
+      - "8080:80"
     environment:
-      WORDPRESS_DB_HOST: db_server # Merujuk ke nama service database
+      WORDPRESS_DB_HOST: db_server
       WORDPRESS_DB_USER: wp_user
       WORDPRESS_DB_PASSWORD: wp_password
       WORDPRESS_DB_NAME: wp_database
+      # Environment tambahan untuk plugin Redis nantinya
+      WORDPRESS_CACHE_HOST: redis_cache
+      WORDPRESS_CACHE_PORT: 6379
     networks:
       - frontend-net
-      - backend-net # Membutuhkan akses ke backend untuk terhubung ke DB
+      - backend-net
     volumes:
-      - wp_data:/var/www/html # Persistensi data untuk tema, plugin, dan upload
+      - wp_data:/var/www/html
     depends_on:
       - db_server
+      - redis_cache
+      - minio_storage
 
-  # --- DATABASE LAYER (Kerangka untuk referensi) ---
+  # --- DATABASE LAYER (Minggu 1) ---
   db_server:
     image: mariadb:10.11
     container_name: wp_db
@@ -32,9 +37,35 @@ services:
       MYSQL_USER: wp_user
       MYSQL_PASSWORD: wp_password
     networks:
-      - backend-net # Terisolasi HANYA di backend-net, tidak ada port yang diekspos ke publik
+      - backend-net
     volumes:
       - db_data:/var/lib/mysql
+
+  # --- CACHING LAYER (Baru - Minggu 2) ---
+  redis_cache:
+    image: redis:alpine
+    container_name: wp_redis
+    restart: unless-stopped
+    networks:
+      - backend-net # Terisolasi di backend, WordPress akan berkomunikasi via jaringan internal ini
+
+  # --- CLOUD/OBJECT STORAGE LAYER (Baru - Minggu 2) ---
+  minio_storage:
+    image: minio/minio:latest
+    container_name: wp_minio
+    restart: unless-stopped
+    ports:
+      - "9000:9000" # Port API S3 (Untuk koneksi plugin WordPress)
+      - "9001:9001" # Port Console/Dashboard (Untuk Anda akses via browser)
+    environment:
+      MINIO_ROOT_USER: minioadmin        # Username MinIO
+      MINIO_ROOT_PASSWORD: minioadmin123 # Password MinIO
+    command: server /data --console-address ":9001"
+    networks:
+      - frontend-net # Diperlukan agar Anda bisa membuka dashboard di browser
+      - backend-net  # Diperlukan agar WordPress bisa mengirim media ke sini
+    volumes:
+      - minio_data:/data # Persistensi data untuk file media yang diupload
 
 # --- INISIALISASI NETWORK & VOLUME ---
 networks:
@@ -46,3 +77,4 @@ networks:
 volumes:
   wp_data:
   db_data:
+  minio_data: # Volume baru untuk menyimpan file gambar/media Object Storage
