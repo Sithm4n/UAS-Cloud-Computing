@@ -1,1 +1,30 @@
+==================================================
+LOG KONTRIBUSI KELOMPOK - MINGGU 2
+Tema: Optimasi Performa & Object Storage
+==================================================
 
+Berikut adalah pembagian tugas yang adil untuk 5 anggota kelompok pada Minggu 2:
+
+1. [Nama Anggota 1] - [NPM/NIM 1]
+   - Menambahkan dan menyetel kontainer Redis (Cache) di file docker-compose.yml.
+   - Memastikan jaringan Redis aman dan terisolasi di dalam backend-net.
+
+2. [Nama Anggota 2] - [NPM/NIM 2]
+   - Menambahkan dan menyetel kontainer MinIO (Storage) di file docker-compose.yml.
+   - Membuat folder (bucket) baru di dalam dashboard MinIO untuk tempat menyimpan gambar.
+
+3. [Nama Anggota 3] - [NPM/NIM 3]
+   - Mengaktifkan plugin Redis Object Cache di dalam dashboard admin WordPress.
+   - Mengonfigurasi plugin link cloud storage agar file media WordPress otomatis terkirim ke MinIO.
+
+4. [Nama Anggota 4] - [NPM/NIM 4]
+   - Mempelajari materi pembelajaran dan menyelesaikan seluruh kuis kelas Cloud Computing di bisa.ai.
+   - Mengumpulkan bukti berupa sertifikat atau screenshot penyelesaian kuis dari bisa.ai.
+
+5. [Nama Anggota 5] - [NPM/NIM 5] (Anda)
+   - Melakukan testing upload gambar di WordPress untuk memastikan sistem caching dan storage berjalan lancar.
+   - Mengambil semua screenshot bukti tugas (grafik Redis, isi folder MinIO, history Git) dan merapikan file README.md.
+
+==================================================
+Status Tugas: Selesai 100%
+==================================================
