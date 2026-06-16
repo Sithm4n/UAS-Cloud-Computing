@@ -13,7 +13,7 @@ Berikut adalah rincian tugas dan kontribusi masing-masing anggota kelompok dalam
    - Membuat struktur folder project dasar untuk deployment.
    - Mengatur perizinan kolaborator di GitHub agar seluruh anggota dapat melakukan commit.
 
-2. [Nama Anggota 2] - [NPM/NIM 2]
+2. [Ariel Agus Putra Wahyuda] - [240403010036]
    Peran: App Layer Engineer
    Kontribusi: 
    - Menyusun konfigurasi App Layer menggunakan container image resmi WordPress di dalam file docker-compose.yml.
