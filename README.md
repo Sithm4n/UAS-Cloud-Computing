@@ -79,3 +79,72 @@ secara langsung dari jaringan publik, memastikan data integrity dan attack vecto
 [x] [ 011 ] NETWORK_ISOLATION: Membuat custom docker network (frontend-net dan backend-net)
                                untuk memastikan isolasi penuh antar-container.
 
+
+***
+
+## 🚀 MINGGU 2: OPTIMASI PERFORMA & OBJECT STORAGE
+
+### `[ PHASE 02 / ACT 02: OPTIMIZE & STORE ]`
+
+Melanjutkan fondasi arsitektur dasar terisolasi, fase kedua ini berfokus pada peningkatan
+performa aplikasi (*caching layer*) dan efisiensi penyimpanan (*decoupling storage layer*).
+Seluruh pengerjaan taktis pada fase ini juga disinkronisasikan dengan standar kompetensi
+kelas cloud computing dari *bisa.ai*.
+
+***
+
+## 🏗️ EVOLUSI ARSITEKTUR (WEEK 2) - `[ VISUALISASI_CYBER_STACK_V2.TXT ]`
+
+Pada arsitektur diperbarui ini, `WORDPRESS` bertindak sebagai jembatan sentral yang
+menghubungkan *frontend* dengan tiga komponen *backend* terisolasi. `REDIS` meng-cache query
+ database, sedangkan file media dialihkan (*offloaded*) langsung menuju `MINIO` melalui
+interkoneksi private S3 API.
+
+```text
+    ========================================================================
+                          [ PUBLIC_ACCESS_GATEWAY ]
+                               │
+               ┌───────────────┴───────────────┐
+               │ PORT: 80 / 8080               │ PORT: 9001 (Web Console)
+               ▼                               ▼
+    ████████████████████████████████████████████████████████████████████████
+    █                            [ DOCKER_HOST ]                           █
+    █======================================================================█
+    █                           [ NETWORKS INTERSECT ]                     █
+    █                                                                      █
+    █     [ FRONTEND-NET ] (PUBLIC)            [ BACKEND-NET ] (PRIVATE)   █
+    █     ┌────────────────────────┐          ┌────────────────────────┐   █
+    █     │                        │          │                        │   █
+    █     │  ► [ WORDPRESS APP ]   │◄────────►│  ► [ WORDPRESS APP ]   │   █
+    █     │    (Web Service)       │          │    (Core Connection)   │   █
+    █     │                        │          │                        │   █
+    █     │  ► [ MINIO CONSOLE ]   │          │  ► [ REDIS CACHE ]     │   █
+    █     │    (Management UI)     │          │    (In-Memory Cache)   │   █
+    █     │                        │          │                        │   █
+    █     └───────────┬────────────┘          │  ► [ DB MARIADB ]      │   █
+    █                 │                       │    (Relational State)  │   █
+    █                 ▼                       └───────────┬────────────┘   █
+    █         [ MINIO STORAGE ]                           │                █
+    █         (Object S3 API)                             ▼                █
+    █                 │                            [ DATA VOLUMES ]        █
+    █                 ▼                           (Persistent State)       █
+    █         [( minio_data )]                            │                █
+    █                                                     ▼                █
+    █                                          [( db_data / wp_data )]     █
+    ████████████████████████████████████████████████████████████████████████
+
+✅ TARGET CAPAIAN MINGGU 2 - [ CHECKLIST ]
+[x] [ 210 ] CACHING_LAYER_REDIS: Menyusun Caching Layer menggunakan container Redis
+                                 alpine yang terintegrasi penuh untuk mempercepat
+                                 query database internal.
+
+[x] [ 220 ] OBJECT_STORAGE_MINIO: Membangun Cloud Storage Layer mandiri berbasis
+                                  MinIO sebagai simulator S3 lokal.
+
+[x] [ 221 ] WP_MEDIA_OFFLOAD: Mengonfigurasi modul WordPress agar setiap upload
+                              aset gambar/media (wp-content/uploads) dialihkan secara
+                              otomatis ke bucket Object Storage.
+
+[x] [ 230 ] BISA_AI_COMPETENCY: Menyelesaikan seluruh modul instruksional, kuis,
+                                dan verifikasi kepesertaan kelas Cloud Computing
+                                di platform bisa.ai.
