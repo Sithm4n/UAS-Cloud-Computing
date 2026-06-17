@@ -1,4 +1,4 @@
-
+```text
  ██████╗██╗      ██████╗ ██╗   ██╗██████╗     
 ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    
 ██║     ██║     ██║   ██║██║   ██║██║  ██║    
@@ -135,6 +135,8 @@ interkoneksi private S3 API.
     █                                                     ▼                █
     █                                          [( db_data / wp_data )]     █
     ████████████████████████████████████████████████████████████████████████
+
+```
 
 ✅ TARGET CAPAIAN MINGGU 2 - [ CHECKLIST ]
 [x] [ 210 ] CACHING_LAYER_REDIS: Menyusun Caching Layer menggunakan container Redis
