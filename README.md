@@ -20,7 +20,7 @@
 ╚███╔███╔╝╚██████╗██║  ██║██████╔╝██║     ██║  ██║███████╗███████║███████║
  ╚══╝╚══╝  ╚═════╝╚═╝  ╚═╝╚═════╝ ╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
 
-```
+
 
 
 [ TYPE: ENTERPRISE-READY ] [ ARCHITECTURE: MODULAR DOCKER CONTAINERS ]
@@ -38,7 +38,7 @@ Arsitektur ini didesain agar App Layer dan Database Layer tidak dapat "saling me
 secara langsung dari jaringan publik, memastikan data integrity dan attack vector reduction.
 
 
-```text
+
 
 ========================================================
                       [ PUBLIC_ACCESS ]
@@ -70,7 +70,7 @@ secara langsung dari jaringan publik, memastikan data integrity dan attack vecto
     █                                   +------------+     █
     ========================================================
 
-```
+
 
 ✅ TARGET CAPAIAN - [ CHECKLIST ]
 [x] [ 010 ] PROJECT_STRUCTURE_GIT: Membuat struktur folder project dan inisialisasi
@@ -105,7 +105,7 @@ menghubungkan *frontend* dengan tiga komponen *backend* terisolasi. `REDIS` meng
  database, sedangkan file media dialihkan (*offloaded*) langsung menuju `MINIO` melalui
 interkoneksi private S3 API.
 
-```text
+
     ========================================================================
                           [ PUBLIC_ACCESS_GATEWAY ]
                                │
@@ -138,7 +138,7 @@ interkoneksi private S3 API.
     █                                          [( db_data / wp_data )]     █
     ████████████████████████████████████████████████████████████████████████
 
-```
+
 
 ✅ TARGET CAPAIAN MINGGU 2 - [ CHECKLIST ]
 [x] [ 210 ] CACHING_LAYER_REDIS: Menyusun Caching Layer menggunakan container Redis
