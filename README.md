@@ -22,7 +22,7 @@
 
 ```
 
-```text
+```
 [ TYPE: ENTERPRISE-READY ] [ ARCHITECTURE: MODULAR DOCKER CONTAINERS ]
 
 🌐 MINGGU 1: FONDASI ARSITEKTUR & PROTOKOL ISOLASI
@@ -71,7 +71,7 @@ secara langsung dari jaringan publik, memastikan data integrity dan attack vecto
     ========================================================
 
 ```
-```text
+```
 ✅ TARGET CAPAIAN - [ CHECKLIST ]
 [x] [ 010 ] PROJECT_STRUCTURE_GIT: Membuat struktur folder project dan inisialisasi
                                    repositori Git.
@@ -139,7 +139,7 @@ interkoneksi private S3 API.
     ████████████████████████████████████████████████████████████████████████
 
 ```
-```text
+```
 ✅ TARGET CAPAIAN MINGGU 2 - [ CHECKLIST ]
 [x] [ 210 ] CACHING_LAYER_REDIS: Menyusun Caching Layer menggunakan container Redis
                                  alpine yang terintegrasi penuh untuk mempercepat
