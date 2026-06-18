@@ -13,7 +13,7 @@ Berikut adalah pembagian tugas yang adil untuk 5 anggota kelompok pada Minggu 2:
    - Menambahkan dan menyetel kontainer MinIO (Storage) di file docker-compose.yml.
    - Membuat folder (bucket) baru di dalam dashboard MinIO untuk tempat menyimpan gambar.
 
-3. [Aji Bayu Alammmm] - [240403010057]
+3. [Aji Bayu Alam] - [240403010057]
    - Mengaktifkan plugin Redis Object Cache di dalam dashboard admin WordPress.
    - Mengonfigurasi plugin link cloud storage agar file media WordPress otomatis terkirim ke MinIO.
 
