@@ -9,7 +9,7 @@ Berikut adalah pembagian tugas akhir untuk 5 anggota kelompok pada Minggu 3:
    - Membuat file .env lokal untuk memisahkan data sensitif.
    - Mengamankan semua password database dan token akses agar tidak terekspos secara mentah.
 
-2.  - [Aji Bayu Alam] 
+2.  - [Aji Bayu Alam] - [240403010057]
    - Memperbarui file docker-compose.yml agar menggunakan sistem pemanggilan variabel environment.
    - Memastikan semua container (WordPress, MariaDB) membaca password secara dinamis dari file .env.
 
