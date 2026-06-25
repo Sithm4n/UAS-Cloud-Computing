@@ -10,9 +10,9 @@ services:
       - "8080:80"
     environment:
       WORDPRESS_DB_HOST: db_server
-      WORDPRESS_DB_USER: wp_user
-      WORDPRESS_DB_PASSWORD: wp_password
-      WORDPRESS_DB_NAME: wp_database
+      WORDPRESS_DB_USER: ${WP_DB_USER}
+      WORDPRESS_DB_PASSWORD: ${WP_DB_PASSWORD}
+      WORDPRESS_DB_NAME: ${WP_DB_NAME}
       # Environment tambahan untuk plugin Redis nantinya
       WORDPRESS_CACHE_HOST: redis_cache
       WORDPRESS_CACHE_PORT: 6379
@@ -32,10 +32,10 @@ services:
     container_name: wp_db
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: root_password
-      MYSQL_DATABASE: wp_database
-      MYSQL_USER: wp_user
-      MYSQL_PASSWORD: wp_password
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${WP_DB_NAME}
+      MYSQL_USER: ${WP_DB_USER}
+      MYSQL_PASSWORD: ${WP_DB_PASSWORD}
     networks:
       - backend-net
     volumes:
@@ -58,8 +58,8 @@ services:
       - "9000:9000" # Port API S3 (Untuk koneksi plugin WordPress)
       - "9001:9001" # Port Console/Dashboard (Untuk Anda akses via browser)
     environment:
-      MINIO_ROOT_USER: minioadmin        # Username MinIO
-      MINIO_ROOT_PASSWORD: minioadmin123 # Password MinIO
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}        # Username MinIO
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD} # Password MinIO
     command: server /data --console-address ":9001"
     networks:
       - frontend-net # Diperlukan agar Anda bisa membuka dashboard di browser
