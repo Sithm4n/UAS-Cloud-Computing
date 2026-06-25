@@ -21,9 +21,9 @@ Berikut adalah pembagian tugas akhir untuk 5 anggota kelompok pada Minggu 3:
    - Menyusun dokumentasi hasil proyek kelompok dan mengunggahnya ke platform bisa.ai.
    - Menerbitkan portofolio proyek Cloud Computing kelompok agar bisa diverifikasi secara publik.
 
-5. [Nama Anda] - [NPM/NIM]
-   - Melakukan pengujian akhir (Quality Assurance) untuk memastikan container tetap berjalan lancar setelah hardening.
-   - Memperbarui gambar arsitektur sistem dan merapikan file README.md final di repositori GitHub.
+5. [Rafi Rinaldika Naufal] - [240403010077]
+   - Melakukan verifikasi login, pengujian akses dashboard MinIO, dan halaman utama WordPress.
+   - Mendokumentasikan bukti visual (screenshot) jalannya container dan dashboard storage.
 
 ==================================================
 Status Tugas: Selesai 100% (Arsitektur Aman & Siap Dikumpul)
