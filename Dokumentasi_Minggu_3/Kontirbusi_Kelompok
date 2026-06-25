@@ -5,11 +5,11 @@ Tema: Hardening, Dokumentasi, & Portofolio
 
 Berikut adalah pembagian tugas akhir untuk 5 anggota kelompok pada Minggu 3:
 
-1. Adnan Adhi Pramana - [NPM/NIM]
+1.  - [NPM/NIM]
    - Membuat file .env lokal untuk memisahkan data sensitif.
    - Mengamankan semua password database dan token akses agar tidak terekspos secara mentah.
 
-2. Andika Dwi Febrian - [NPM/NIM]
+2.  - [NPM/NIM]
    - Memperbarui file docker-compose.yml agar menggunakan sistem pemanggilan variabel environment.
    - Memastikan semua container (WordPress, MariaDB, MinIO) membaca password secara dinamis dari file .env.
 
@@ -17,7 +17,7 @@ Berikut adalah pembagian tugas akhir untuk 5 anggota kelompok pada Minggu 3:
    - Membuat dan mengonfigurasi file .gitignore di root folder project.
    - Memastikan file .env terisolasi di lokal dan aman dari kebocoran (tidak ikut ter-upload ke publik GitHub).
 
-4. Ariel Agus Putra Wahyuda - [NPM/NIM]
+4. - [NPM/NIM]
    - Menyusun dokumentasi hasil proyek kelompok dan mengunggahnya ke platform bisa.ai.
    - Menerbitkan portofolio proyek Cloud Computing kelompok agar bisa diverifikasi secara publik.
 
