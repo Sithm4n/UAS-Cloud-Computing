@@ -155,3 +155,54 @@ interkoneksi private S3 API.
 [x] [ 230 ] BISA_AI_COMPETENCY: Menyelesaikan seluruh modul instruksional, kuis,
                                 dan verifikasi kepesertaan kelas Cloud Computing
                                 di platform bisa.ai.
+***
+
+## 🔐 MINGGU 3: HARDENING, DOKUMENTASI, & PORTOFOLIO
+
+### `[ PHASE 03 / ACT 03: SECURE & DELIVER ]`
+
+Berdasarkan panduan final pada **image_083247.png**, fase ketiga ini berfokus pada
+**Hardening** (penguatan keamanan) sistem. Fokus utama kelompok adalah melakukan
+de-coupling data sensitif menggunakan variabel lingkungan, mencegah kebocoran data
+(*credential leaks*) pada repositori publik, serta melakukan integrasi portofolio eksternal. 
+
+Sesuai dengan penyesuaian instruksi terbaru, pengerjaan difokuskan penuh pada optimalisasi
+repositori dan validasi platform tanpa beban dokumen fisik tambahan.
+
+***
+
+## 🛠️ SKEMA KEAMANAN ENV (WEEK 3) - `[ INJECT_PROT_SYSTEM.TXT ]`
+
+Protokol ini memutus seluruh *hardcoded credentials* di dalam konfigurasi utama. File `.env`
+ disimpan secara lokal (terproteksi oleh `.gitignore`), sementara `docker-compose.yml`
+hanya memanggil variabel dinamis.
+
+```text
+  ┌──────────────────────────────┐
+  │           [ .env ]           │  ◄─── [ BERISI: PASSWORD, USER, API KEYS ]
+  │    (Lokal / Tersembunyi)     │       (Aman dari sniffing GitHub)
+  └──────────────┬───────────────┘
+                 │
+                 │ (Injeksi Variabel Otomatis)
+                 ▼
+  ██████████████████████████████████
+  █    [ DOCKER-COMPOSE.YML ]      █
+  █================================█
+  █  environment:                  █
+  █   - WORDPRESS_DB_PASSWORD      █ ◄─── [ AMAN / BEBAS HARDCODE ]
+  █   - MYSQL_ROOT_PASSWORD        █       (Siap dipublish ke publik)
+  ██████████████████████████████████
+
+✅ TARGET CAPAIAN MINGGU 3 - [ CHECKLIST ]
+[x] [ 310 ] ENVIRONMENT_HARDENING: Menerapkan Best Practices Keamanan dengan memisahkan
+                                   seluruh credentials (password database & akses root)
+                                   ke dalam file .env.
+
+[x] [ 311 ] ZERO_HARDCODE_VALIDATION: Membersihkan file docker-compose.yml dari teks
+                                      sandi mentah agar aman saat di-push ke GitHub.
+
+[x] [ 320 ] BISA_AI_PORTFOLIO: Membangun dan mempublikasikan portofolio proyek Cloud
+                               Computing ini pada platform bisa.ai.
+
+[x] [ 330 ] FINAL_REPO_DELIVERY: Finalisasi seluruh berkas repositori sebagai output
+                                 monitoring utama.
