@@ -1,0 +1,18 @@
+# =========================================================================
+# GIT IGNORE RULES - CLOUD COMPUTING PROJECT
+# =========================================================================
+
+# Abaikan file konfigurasi rahasia (Sangat Penting untuk Hardening Minggu 3)
+.env
+
+# Abaikan data lokal dari volume jika berada dalam folder project
+db_data/
+wp_data/
+minio_data/
+
+# Abaikan file sampah OS & Log
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
