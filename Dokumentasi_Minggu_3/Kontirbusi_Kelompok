@@ -11,7 +11,7 @@ Berikut adalah pembagian tugas akhir untuk 5 anggota kelompok pada Minggu 3:
 
 2.  - [NPM/NIM]
    - Memperbarui file docker-compose.yml agar menggunakan sistem pemanggilan variabel environment.
-   - Memastikan semua container (WordPress, MariaDB, MinIO) membaca password secara dinamis dari file .env.
+   - Memastikan semua container (WordPress, MariaDB) membaca password secara dinamis dari file .env.
 
 3. Naja Najwa Robbi - [NPM/NIM]
    - Membuat dan mengonfigurasi file .gitignore di root folder project.
@@ -22,8 +22,8 @@ Berikut adalah pembagian tugas akhir untuk 5 anggota kelompok pada Minggu 3:
    - Menerbitkan portofolio proyek Cloud Computing kelompok agar bisa diverifikasi secara publik.
 
 5. [Rafi Rinaldika Naufal] - [240403010077]
-   - Melakukan verifikasi login, pengujian akses dashboard MinIO, dan halaman utama WordPress.
-   - Mendokumentasikan bukti visual (screenshot) jalannya container dan dashboard storage.
+   - Melakukan verifikasi login dan halaman utama WordPress.
+   - Mendokumentasikan bukti visual (screenshot) jalannya database.
 
 ==================================================
 Status Tugas: Selesai 100% (Arsitektur Aman & Siap Dikumpul)
